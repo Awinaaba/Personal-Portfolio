@@ -12,6 +12,18 @@ window.onscroll = function() {
     scrollBtn.style.display = "none";
   }
 
+// Show/Hide Contact Form
+const chatButton = document.getElementById("chatButton");
+const contactForm = document.getElementById("contactForm");
+
+chatButton.addEventListener("click", () => {
+  if (contactForm.style.display === "none" || contactForm.style.display === "") {
+    contactForm.style.display = "block";
+  } else {
+    contactForm.style.display = "none";
+  }
+});
+
 }
 
 // Side NavIgation Menu JS Code
