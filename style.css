@@ -24,6 +24,11 @@
 ::-webkit-scrollbar-thumb:hover {
     background: hsl(38, 98%, 50%);
 }
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* navbar styling */
 nav{
   position: fixed;
@@ -353,17 +358,119 @@ section .button button:hover{
   color: #fff;
 }
 /* Contact Me CSS */
-.contact{
-  background: #F0F8FF;
+
+/* Center text, button, and form container in the Contact Me section */
+.contact .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center everything horizontally */
+  text-align: center; /* Center text */
+  width: 100%; /* Ensure it takes full width */
 }
-.contact .content{
-  margin: 0 auto;
-  padding: 30px 0;
+
+.contact .text {
+  max-width: 600px; /* Limit width for better readability */
+  margin: 20px 0; /* Add margin for spacing */
 }
-.contact .text{
-  width: 80%;
-  text-align: center;
-  margin: auto;
+
+.contact .topic {
+  font-size: 25px;
+  font-weight: 500;
+  color: #0E2431;
+  margin-bottom: 10px;
+}
+
+.contact .text p {
+  color: #0E2431;
+  margin-bottom: 20px;
+}
+
+.contact .button button {
+  background: #4070f4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact .button button:hover {
+  background: #3056be; /* Darker shade on hover */
+}
+
+/* Center the form container */
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px; /* Fixed width for the form */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the form container */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact .text {
+    max-width: 100%; /* Allow text to take full width on small screens */
+    padding: 0 15px; /* Add padding for better spacing */
+  }
+
+  .form-container {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+}
+
+/* Form Group Styling */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4070f4; /* Match the color of the Send/Let's Chat button */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #0E2431;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allows vertical resizing */
+}
+
+/* Send Button Styling */
+.contact-form button[type="submit"] {
+  background: #4070f4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contact-form button[type="submit"]:hover {
+  background: #3056be; /* Darker shade on hover */
 }
 
 /* Footer CSS */
